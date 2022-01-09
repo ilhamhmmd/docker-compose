@@ -29,7 +29,7 @@ services:
     volumes:
       - ./:/var/www/html
     ports:
-      - "9001:9000"
+      - "9000:9000"
     networks:
       - webapp
 
@@ -38,7 +38,7 @@ services:
     container_name: ${APP_NAME}_postgres
     restart: unless-stopped
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
       - ./docker/postgres:/var/lib/postgresql/data
     environment:
